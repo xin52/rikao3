@@ -73,6 +73,14 @@
     			<p>使用门槛:1.满100元即可使用:2.本卷适用于所有项目</p>
     			<p>使用时间:即日起至2016年11月10日</p>
     		</div>
+    		<div class="body">
+    			<div class="top">
+    				<u>￥<i>5</i></u>
+    				<span>满减卷</span>
+    			</div>
+    			<p>使用门槛:1.满100元即可使用:2.本卷适用于所有项目</p>
+    			<p>使用时间:即日起至2016年11月10日</p>
+    		</div>
     	  </div>
     		<div>
     		  <div class="body">
@@ -121,7 +129,16 @@
     </div>
 	
 	
-
+       
+	<script src="js/zepto.min.js"></script>
+	<script>
+    $("ul>li").eq(0).find("a").css({"color":"blue","border-bottom":"1px solid blue"})
+    $("ul>li").on("tap",function(){
+    	var ind=$(this).index()
+    	$(this).find("a").css({"color":"blue","border-bottom":"1px solid blue"})
+    	$(this).siblings().find("a").css({"color":"#999","border-bottom":"none"})
+    	$(".div>div").eq(ind).show().siblings().hide()
+    })
 	</script>
 </body>
 </html>
